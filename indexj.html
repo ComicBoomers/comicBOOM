@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="http://www.i2clipart.com/cliparts/c/7/b/7/128135c7b73b26ec242ae747322ca6ba25575c.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+  <title>ComicBOOM</title>
+  <script src="//use.edgefonts.net/fredericka-the-great.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBAxHC8sZT6E7_Z8d4k87aP19xSf88JoRU",
+      authDomain: "comicboom-71166.firebaseapp.com",
+      databaseURL: "https://comicboom-71166.firebaseio.com",
+      projectId: "comicboom-71166",
+      storageBucket: "comicboom-71166.appspot.com",
+      messagingSenderId: "922530729806"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-functions.js"></script>
+
+  <!-- Comment out (or don't include) services that you don't want to use -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-storage.js"></script> -->
+
+  <!-- iOS specific styles -->
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- Possible values include default, black, or black-translucent; only black-translucent is truly full screen -->
+  <!-- More info: https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Home screen icon -->
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/appIcon.png">
+
+  <!-- iOS startup images -->
+  <!-- More info and Sketch template: https://medium.com/@applification/progressive-web-app-splash-screens-80340b45d210 -->
+
+  <!-- iPhone SE -->
+  <link rel="apple-touch-startup-image" href="http://www.i2clipart.com/cliparts/c/7/b/7/128135c7b73b26ec242ae747322ca6ba25575c.png"
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="http://www.i2clipart.com/cliparts/c/7/b/7/128135c7b73b26ec242ae747322ca6ba25575c.png"
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+  <!-- iPhone 6/7/8 -->
+  <link rel="apple-touch-startup-image" href="%PUBLIC_URL%/images/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="%PUBLIC_URL%/images/launch-750x1294-landscape.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+  <!-- iPhone 6+/7+/8+ -->
+  <link rel="apple-touch-startup-image" href="%PUBLIC_URL%/images/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="%PUBLIC_URL%/images/launch-1242x2148-landscape.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+
+  <!-- iPhone X -->
+  <link rel="apple-touch-startup-image" href="http://www.i2clipart.com/cliparts/c/7/b/7/128135c7b73b26ec242ae747322ca6ba25575c.png"
+    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="http://www.i2clipart.com/cliparts/c/7/b/7/128135c7b73b26ec242ae747322ca6ba25575c.png"
+    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+</head>
+
+<body>
+
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>

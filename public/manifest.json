@@ -1,0 +1,13 @@
+{
+  "short_name": "ComicBOOM",
+  "name": "ComicBOOM",
+  "icons": [{
+    "src": "http://www.i2clipart.com/cliparts/c/7/b/7/128135c7b73b26ec242ae747322ca6ba25575c.png",
+    "sizes": "64x64 32x32 24x24 16x16",
+    "type": "image/x-icon"
+  }],
+  "start_url": "/comicBoom/login",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
